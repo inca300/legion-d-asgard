@@ -2,13 +2,20 @@
 
 const main =  document.querySelector("main");
 const icon = document.querySelector(".menu-icon");
+const body = document.querySelector("body");
+const menu = document.querySelector(".menu");
 let canOpenMenu = true;
 
 icon.addEventListener("click", event => {
     event.stopPropagation();
+    displayMenu();
+});
+
+const displayMenu = () => {
     if(canOpenMenu) {
         const menu = document.createElement('section');
         menu.className = "menu";
+        menu.style.animation = 'menu-open 0.2s';
         menu.innerHTML = `
         <ul>
             <li>
@@ -28,12 +35,11 @@ icon.addEventListener("click", event => {
         main.append(menu);
         canOpenMenu = !canOpenMenu;
 
-        menu.addEventListener('mouseleave', event => {
+        body.addEventListener('click', event => {
+            menu.style.animation = 'menu-close 2s';
             menu.remove();
             canOpenMenu = !canOpenMenu;
         });    
     };
-
-
-});
+};
 

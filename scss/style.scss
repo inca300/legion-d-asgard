@@ -1,6 +1,7 @@
 @import "variables";
 @import "reset";
 @import "base";
+@import "animations";
 
 .container {
     min-height: 100vh;
@@ -52,15 +53,15 @@ footer {
     // background : linear-gradient(to bottom, );
     width: 80px;
     height: 80px;
-    border: 1px solid var(--shadow-light);
+    border: 2px solid var(--gray);
     border-radius: 10px;
-    box-shadow: 3px 3px 3px var(--shadow-light);
+    box-shadow: 1px 1px 2px var(--shadow-light);
     cursor: pointer;
 
     span {
         width: 50px;
         height: 3px;
-        background: var(--light);
+        background: var(--gray);
         margin: 5px 0;
         box-shadow: 2px 2px 3px black;
         border-radius: 50px;
