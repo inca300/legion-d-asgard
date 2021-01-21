@@ -15,13 +15,17 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
     background-image: url("../img/header-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 2px 5px 3px var(--shadow-dark);
 }
 main {
     flex: 3;
-    background-color : red;
+    display : flex;
+    flex-direction: column;
 }
 
 footer {
@@ -29,18 +33,35 @@ footer {
     background-color : green;
 }
 
+
+.fa-space-shuttle {
+    z-index: -1;
+    position: absolute;
+    left: 350px;
+    top: 45px;
+    color: var(--light);
+    transition : all 0.7s;
+    opacity: 0;
+}
+
+
+
 .header-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    img {
-        display: inline-block;
-    }
-
     h1 > a {
         display: inline;
         font-size: 2.4rem;
         text-shadow: 2px 2px 3px var(--shadow-light);
+    }
+
+    h1:hover {
+        i {
+            opacity : 1;
+            transition : transform 0.7s;
+            transform: translateX(300px);
+        }
     }
 }
 
@@ -116,4 +137,29 @@ footer {
             }
         }
     }
+}
+
+
+.who {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing:1.2px;
+    }
+}
+
+.presentation {
+    flex: 1;
+    background : yellow;
+}
+
+.join {
+    flex: 1;
+    background: purple;
 }

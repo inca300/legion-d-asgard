@@ -1,44 +1,47 @@
 "use strict";
 
-const main =  document.querySelector("main");
+const main = document.querySelector("main");
 const icon = document.querySelector(".menu-icon");
 const body = document.querySelector("body");
+
 let canOpenMenu = true;
 
-icon.addEventListener("click", event => {
-    event.stopPropagation();
-    displayMenu();
+icon.addEventListener("click", (event) => {
+  event.stopPropagation();
+  displayMenu();
 });
 
 const displayMenu = () => {
-    if(canOpenMenu) {
-        const menu = document.createElement("section");
-        menu.className ="menu";
-        menu.style.animation = 'menu-open 0.2s';
-        menu.insertAdjacentHTML("afterbegin",`
+  if (canOpenMenu) {
+    const menu = document.createElement("section");
+    menu.className = "menu";
+    menu.style.animation = "menu-open 0.2s";
+    menu.insertAdjacentHTML(
+      "afterbegin",
+      `
         <ul>
             <li>
-                <p><a class="menu-text" href="">Qui sommes-nous ?</a></p>
+                <p><a class="menu-text" href="#lore">Qui sommes-nous ?</a></p>
                 <span></span>
             </li>
             <li>
-                <p><a class="menu-text" href="">Nous rejoindre</a></p>
+                <p><a class="menu-text" href="#presentation">Nous rejoindre</a></p>
                 <span></span>
             </li>
             <li>
-                <p><a class="menu-text" href="">Nous contacter</a></p>
+                <p><a class="menu-text" href="#join">Nous contacter</a></p>
                 <span></span>
             </li>
         </ul>
-        `);
-        main.append(menu);
-        canOpenMenu = !canOpenMenu
+        `
+    );
+    main.append(menu);
+    canOpenMenu = !canOpenMenu;
 
-        body.addEventListener('click', event => {
-            menu.style.animation = 'menu-close 0.2s';
-            setTimeout(() => menu.remove(), 100);
-            canOpenMenu = true;
-        });    
-    };
+    body.addEventListener("click", (event) => {
+      menu.style.animation = "menu-close 0.2s";
+      setTimeout(() => menu.remove(), 100);
+      canOpenMenu = true;
+    });
+  }
 };
-
