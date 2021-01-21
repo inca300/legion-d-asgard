@@ -1,9 +1,10 @@
 :root {
-  --font-family: 'MedievalSharp', cursive;
+  --font-family: 'Play', sans-serif;
   --gray: #b1afae;
   --shadow-light: #706b66;
   --shadow-dark: #242323;
-  --dark: #424140; }
+  --dark: #424140;
+  --light: #e7e4e1; }
 
 body {
   margin: 0;
@@ -16,7 +17,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--gray); }
+  color: var(--light); }
 
 ul {
   list-style: none; }
@@ -43,6 +44,9 @@ span {
   to {
     right: 0px;
     opacity: 0; } }
+
+.menu-text {
+  color: white !important; }
 
 .container {
   min-height: 100vh;
@@ -74,7 +78,7 @@ footer {
     display: inline-block; }
   .header-container h1 > a {
     display: inline;
-    font-size: 2rem;
+    font-size: 2.4rem;
     text-shadow: 2px 2px 3px var(--shadow-light); }
 
 .menu-icon {
@@ -85,14 +89,14 @@ footer {
   margin-right: 50px;
   width: 80px;
   height: 80px;
-  border: 2px solid var(--gray);
+  border: 2px solid var(--light);
   border-radius: 10px;
   box-shadow: 1px 1px 2px var(--shadow-light);
   cursor: pointer; }
   .menu-icon span {
     width: 50px;
     height: 3px;
-    background: var(--gray);
+    background: var(--light);
     margin: 5px 0;
     box-shadow: 2px 2px 3px black;
     border-radius: 50px; }
