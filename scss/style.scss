@@ -17,7 +17,7 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
-    background-image: url("../img/header-background.jpg");
+    background: var(--dark);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 2px 5px 3px var(--shadow-dark);
@@ -26,6 +26,15 @@ main {
     flex: 3;
     display : flex;
     flex-direction: column;
+    background-image: url("../img/header-background.jpg");
+
+    h2 {
+        color: var(--light);
+    }
+
+    p {
+        color: var(--light);
+    }
 }
 
 footer {
@@ -37,10 +46,10 @@ footer {
 .fa-space-shuttle {
     z-index: -1;
     position: absolute;
-    left: 350px;
+    left: 400px;
     top: 45px;
     color: var(--light);
-    transition : all 0.7s;
+    transition : all 0.4s;
     opacity: 0;
 }
 
@@ -71,7 +80,6 @@ footer {
     justify-content: center;
     align-items: center;
     margin-right: 50px;
-    // background : linear-gradient(to bottom, );
     width: 80px;
     height: 80px;
     border: 2px solid var(--light);
@@ -95,6 +103,7 @@ footer {
     align-items: center;
     position: absolute;
     top: 2rem;
+    position: fixed;
     right: 150px;
     width: 300px;
     height: 300px;
@@ -146,7 +155,6 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
     p {
         font-size: 1.5rem;
         text-align: center;

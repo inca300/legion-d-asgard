@@ -36,7 +36,7 @@ const displayMenu = () => {
         `
     );
     main.append(menu);
-    canOpenMenu = !canOpenMenu;
+    canOpenMenu = false;
 
     body.addEventListener("click", (event) => {
       menu.style.animation = "menu-close 0.2s";
