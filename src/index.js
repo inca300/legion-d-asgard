@@ -1,4 +1,4 @@
-"use strict";
+import "./assets/scss/style.scss";
 
 const main = document.querySelector("main");
 const icon = document.querySelector(".menu-icon");
@@ -14,7 +14,7 @@ icon.addEventListener("click", (event) => {
 const displayMenu = () => {
   if (canOpenMenu) {
     const menu = document.createElement("section");
-    menu.className = "menu";
+    menu.classList.add("menu");
     menu.style.animation = "menu-open 0.2s";
     menu.insertAdjacentHTML(
       "afterbegin",
@@ -38,7 +38,7 @@ const displayMenu = () => {
     main.append(menu);
     canOpenMenu = false;
 
-    body.addEventListener("click", (event) => {
+    window.addEventListener("click", (event) => {
       menu.style.animation = "menu-close 0.2s";
       setTimeout(() => menu.remove(), 100);
       canOpenMenu = true;
